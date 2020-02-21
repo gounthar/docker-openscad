@@ -9,6 +9,7 @@ ARG GITHUB_REPO=openscad
 ARG BRANCH=master
 
 RUN \
+        mkdir ~/.gnupg && echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf
 	apt-get update && \
 	apt-get upgrade -y && \
 	apt-get install -y --no-install-recommends apt-utils apt-transport-https ca-certificates git wget gnupg && \
