@@ -2,7 +2,7 @@
 # Build: docker build -t appimage-x86_64-base .
 # Use: docker run --rm -it -v appimage-x86_64-base
 #
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ARG GITHUB_USER=openscad
 ARG GITHUB_REPO=openscad
