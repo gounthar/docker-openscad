@@ -46,7 +46,7 @@ WORKDIR /qt5-update
 
 RUN \
 	apt-get install -y --no-install-recommends build-essential fakeroot devscripts qt512-meta-minimal qt512gamepad qt512multimedia && \
-	cd /opt/qt512/include/ && ln -s /usr/include/x86_64-linux-gnu/qt5/Qsci && \
+	cd /opt/qt512/include/ && ls -artl /usr/include/ && ln -s /usr/include/x86_64-linux-gnu/qt5/Qsci && \
 	cd /opt/qt512/mkspecs/features && ln -s /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/qscintilla2.prf
 
 WORKDIR /appimage
