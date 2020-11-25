@@ -16,7 +16,8 @@ RUN \
 	sed -ie 's/^#\s*\(.*universe\)$/\1/' /etc/apt/sources.list && \
 	echo "deb http://ppa.launchpad.net/beineri/opt-qt-5.12.3-xenial/ubuntu xenial main" >> /etc/apt/sources.list && \
 	echo "deb http://download.opensuse.org/repositories/home:/t-paul:/lib3mf/xUbuntu_18.04/ ./" >> /etc/apt/sources.list && \
-	echo "deb http://download.opensuse.org/repositories/home:/t-paul:/appimage-support/xUbuntu_18.04/ ./" >> /etc/apt/sources.list && \
+	wget hthttps://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-aarch64.AppImage && \
+	chmod +x appimagetool-aarch64.AppImage && \
 	grep -v "^#" /etc/apt/sources.list && \
 	apt-key adv --homedir ~/.gnupg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys C65D51784EDC19A871DBDBB710C56D0DE9977759 && \
 	wget -qO - https://files.openscad.org/OBS-Repository-Key.pub | apt-key add - && \
