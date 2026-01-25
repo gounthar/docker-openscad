@@ -2,14 +2,18 @@
 # Build: docker build -t openscad/mxe-requirements .
 # Use: docker run --rm -it -v openscad/mxe-requirements
 #
-FROM buildpack-deps:bookworm
+FROM buildpack-deps:trixie
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
 
 RUN apt-get install -y --no-install-recommends \
 	python-is-python3 \
 	python3-mako \
-	libpcre3-dev \
+	libgl1-mesa-dev \
+	libclang-dev \
+	libpcre2-dev \
 	libtool-bin \
 	ninja-build \
 	p7zip-full \

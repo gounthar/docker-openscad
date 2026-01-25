@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.2
+# syntax=docker/dockerfile:1.4
 #
 # Build: docker build -t openscad/mxe-base .
 # Use: docker run --rm -it openscad/mxe-base

@@ -34,7 +34,6 @@ RUN \
 	export LIB3MF_INCLUDEPATH="$MXEINC/lib3mf" ; \
 	export LIB3MF_LIBPATH="$MXELIB" ; \
 	bash -c 'ln -sfv /usr/bin/python{3,}' ; \
-	cp "$MXELIB/pkgconfig/intel-tbb.pc" "$MXELIB/pkgconfig/tbb.pc" ; \
 	sed -ie 's/WARNING_FLAGS -Werror/WARNING_FLAGS/' submodules/manifold/CMakeLists.txt ; \
 	./scripts/release-common.sh -v "${OPENSCAD_VERSION}" mingw64 ${RELEASE_TYPE} ; \
 	mkdir -p out; \

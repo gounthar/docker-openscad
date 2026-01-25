@@ -7,6 +7,9 @@ FROM openscad/mxe-base:latest
 ARG JOBS=2
 ARG CLEAN=clean-junk
 
+COPY packages.lst /tmp
+COPY settings.mk /tmp
+
 WORKDIR /mxe
 
 RUN \
