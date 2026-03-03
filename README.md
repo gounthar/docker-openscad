@@ -5,7 +5,7 @@ This repository collects OpenSCAD related docker files. One is meant for running
 
 For general use (running OpenSCAD in a container), please use the `openscad/openscad` images published and documented at Docker Hub.
 
-* [openscad/openscad](https://hub.docker.com/repository/docker/openscad/openscad)
+* [openscad/openscad](https://hub.docker.com/r/openscad/openscad)
 
 ### Rendering to a STL/3MF Model
 
