@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Use the official openscad image as source for binaries
-FROM docker.io/openscad/openscad:latest AS openscad-source
+FROM docker.io/openscad/openscad:trixie AS openscad-source
 
 # Runtime stage with Selkies GUI
 FROM ghcr.io/linuxserver/baseimage-selkies:debiantrixie
